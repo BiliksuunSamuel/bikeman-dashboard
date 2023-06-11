@@ -1,0 +1,69 @@
+{
+  "name": "retron",
+  "version": "1.0.0",
+  "description": "ViteJS + Electron + React + Material-UI Template",
+  "homepage": "https://github.com/jooy2/retron",
+  "author": "jooy2 <jooy2.contact@gmail.com>",
+  "license": "MIT",
+  "main": "dist/main/index.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jooy2/retron.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jooy2/retron/issues"
+  },
+  "scripts": {
+    "dev": "vite",
+    "dev:debug": "vite -d",
+    "dev:debug:force": "vite -d --force",
+    "build": "npm run build:pre && electron-builder -wml",
+    "build:pre": "tsc && vite build",
+    "build:win": "npm run build:pre && electron-builder --windows",
+    "build:mac": "npm run build:pre && electron-builder --mac",
+    "build:linux": "npm run build:pre && electron-builder --linux",
+    "format": "prettier .",
+    "format:fix": "prettier . --write"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/parser": "^5.57.1",
+    "@vitejs/plugin-react-swc": "^3.2.0",
+    "electron": "^23.2.1",
+    "electron-builder": "^23.6.0",
+    "eslint": "^8.37.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-import-resolver-typescript": "^3.5.4",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.4",
+    "vite": "^4.2.1",
+    "vite-plugin-electron": "^0.11.1",
+    "vite-plugin-electron-renderer": "^0.13.14",
+    "vite-plugin-eslint": "^1.8.1"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.11.15",
+    "@reduxjs/toolkit": "^1.9.3",
+    "i18next": "^22.4.14",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "i18next-http-backend": "^2.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^12.2.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.10.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  }
+}
