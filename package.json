@@ -1,18 +1,18 @@
 {
-  "name": "retron",
+  "name": "bikeman",
   "version": "1.0.0",
-  "description": "ViteJS + Electron + React + Material-UI Template",
-  "homepage": "https://github.com/jooy2/retron",
-  "author": "jooy2 <jooy2.contact@gmail.com>",
+  "description": "Bikeman Delivery Services Dashboard",
+  "homepage": "https://github.com/BiliksuunSamuel/bikeman-dashboard",
+  "author": "bhills <biliksuunsamuel@gmail.com>",
   "license": "MIT",
   "main": "dist/main/index.js",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/jooy2/retron.git"
+    "url": "https://github.com/BiliksuunSamuel/bikeman-dashboard.git"
   },
   "bugs": {
-    "url": "https://github.com/jooy2/retron/issues"
+    "url": "https://github.com/BiliksuunSamuel/bikeman-dashboard/issues"
   },
   "scripts": {
     "dev": "vite",
@@ -29,6 +29,7 @@
   "devDependencies": {
     "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
+    "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/parser": "^5.57.1",
     "@vitejs/plugin-react-swc": "^3.2.0",
     "electron": "^23.2.1",
@@ -50,9 +51,10 @@
     "vite-plugin-eslint": "^1.8.1"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
-    "@mui/material": "^5.11.15",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/roboto": "^5.0.3",
+    "@mui/material": "^5.13.4",
     "@reduxjs/toolkit": "^1.9.3",
     "i18next": "^22.4.14",
     "i18next-browser-languagedetector": "^7.0.1",
@@ -61,7 +63,7 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^12.2.0",
     "react-redux": "^8.0.5",
-    "react-router-dom": "^6.10.0"
+    "react-router-dom": "^6.12.1"
   },
   "eslintConfig": {
     "extends": "react-app"

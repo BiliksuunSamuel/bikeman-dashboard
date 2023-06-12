@@ -2,13 +2,14 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-
+import { Stack } from '@mui/material';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import { increaseCount, setDarkTheme, setVersion } from '@/renderer/store/slices/appScreenSlice';
 import { bodyRoot, jumbo } from '@/renderer/assets/css/global';
 import type { RootState } from '@/renderer/store';
+import resources from '../resources';
 
 const Main = () => {
   const darkTheme = useSelector((state: RootState) => state.appScreen.darkTheme);
@@ -43,7 +44,9 @@ const Main = () => {
       <div css={jumbo}>
         <Grid container alignItems="center" spacing={3}>
           <Grid item xs={5}>
-            <img alt="logo" src="images/retron-logo.webp" draggable="false" />
+            <Stack width={120} height={120} overflow="hidden">
+              <img alt="logo" src={resources.bikeman} draggable="false" />
+            </Stack>
           </Grid>
           <Grid item xs={7}>
             <h1>{t('hello-title')}</h1>

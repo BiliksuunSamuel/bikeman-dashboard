@@ -1,17 +1,12 @@
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { ThemeProvider } from '@mui/material';
+import React from 'react';
+import Router from './router/Router';
+import themeConfiguration from './configuration/theme.configuration';
 
-import ScreenNotFound from '@/renderer/screens/ScreenNotFound';
-import Main from '@/renderer/screens/Main';
-
-const App = () => (
-  <HashRouter>
-    <Routes>
-      <Route path="/">
-        <Route index element={<Main />} />
-        <Route path="*" element={ScreenNotFound()} />
-      </Route>
-    </Routes>
-  </HashRouter>
-);
-
-export default App;
+export default function App() {
+  return (
+    <ThemeProvider theme={themeConfiguration}>
+      <Router />
+    </ThemeProvider>
+  );
+}

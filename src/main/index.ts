@@ -19,7 +19,7 @@ const exitApp = (): void => {
 
 const createWindow = async () => {
   mainWindow = new BrowserWindow({
-    width: global.IS_DEV ? 1300 : 720,
+    width: global.IS_DEV ? 800 : 720,
     height: 540,
     webPreferences: {
       nodeIntegration: false,

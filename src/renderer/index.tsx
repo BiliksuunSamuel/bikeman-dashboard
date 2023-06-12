@@ -3,7 +3,11 @@ import { Provider } from 'react-redux';
 import App from '@/renderer/App';
 import { store } from '@/renderer/store';
 import '@/renderer/i18n';
-import ThemeProvider from '@/renderer/components/base/ThemeProvider';
+// import ThemeProvider from '@/renderer/components/base/ThemeProvider';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 // Add API key defined in contextBridge to window object type
 declare global {
@@ -15,8 +19,6 @@ declare global {
 
 createRoot(document.getElementById('app')!).render(
   <Provider store={store}>
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
+    <App />
   </Provider>,
 );
